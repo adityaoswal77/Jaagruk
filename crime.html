@@ -1,0 +1,210 @@
+<html lang="en"><head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <!-- Bootstrap CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css" integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Super admin</title>
+<style>
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.vertical-nav {
+min-width: 17rem;
+width: 17rem;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+background:#2B59C3;
+transition: all 0.4s;
+}
+
+.page-content {
+width: calc(100% - 17rem);
+margin-left: 17rem;
+transition: all 0.4s;
+}
+
+/* for toggle behavior */
+
+#sidebar.active {
+margin-left: -17rem;
+}
+
+#content.active {
+width: 100%;
+margin: 0;
+}
+
+@media (max-width: 768px) {
+#sidebar {
+  margin-left: -17rem;
+}
+#sidebar.active {
+  margin-left: 0;
+}
+#content {
+  width: 100%;
+  margin: 0;
+}
+#content.active {
+  margin-left: 17rem;
+  width: calc(100% - 17rem);
+}
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+body {
+background: #ffffff;
+background: -webkit-linear-gradient(to right, #f0f0f0, #ffffff);
+background: linear-gradient(to right, #ffffff, #ffffff);
+min-height: 100vh;
+overflow-x: hidden;
+}
+</style></head>
+
+<body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="">
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  -->
+<!-- Vertical navbar -->
+<div class="vertical-nav bg-blue" id="sidebar">
+<div class="py-4 px-3 mb-4 bg-light">
+  <div class="media d-flex align-items-center"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Sanjay_Barve%2C_Indian_Police_Service%2C_Commissioner_of_Police%2C_Mumbai.jpg" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+    <div class="media-body">
+      <h4 class="m-0">Jaagruk</h4>
+      <p class="font-weight-light text-muted mb-0">Dashboard</p>
+    </div>
+  </div>
+</div>
+
+<ul class="nav flex-column bg-[#2B59C3] mb-0">
+  <li class="nav-item">
+    <a href="#" class="nav-link text-dark font-italic">
+      <p><i class="fas fa-users" style="color:white"></i>
+    <b style="color:white">
+    Crime
+  </b>
+</p>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="users.html" class="nav-link text-dark font-italic" style="color:white">
+      <p style="color:white"><i class="fas fa-user-alt" style="color:white"></i>
+      User
+      </p>
+    </a>
+  </li>
+  <li class="nav-item">
+  <a href="complaint_web.html" class="nav-link text-dark font-italic">
+    <p style="color:white"><i class="fas fa-user-alt" style="color:white"></i>
+      Complaint
+    </p>
+    </a>
+  </li>
+</ul>
+<center>
+<button type="button" style="width: 70%;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;margin-top:320px;" class="btn btn-light">
+    <a href="login.html" class="nav-link text-dark font-italic bg-light">
+      <i class="fas fa-sign-out-alt"></i>
+      Sign Out
+    </a>
+</button>
+</center>
+
+</div>
+<!-- End vertical navbar -->
+
+<!-- Page content holder -->
+<div class="page-content p-5 id=" content"="">
+<div class="container p-0">
+  <div class="row">
+    <div class="col-7">
+      <h3>Welcome Back!</h3>
+      <h3>Inspector</h3>
+    </div>
+    <div class="col-5 ">
+        <!-- Profile icon -->
+        <div class="container">
+          <div class="row">
+            <div class="col-9">
+            <div class="col-3" style="display:none;">
+              <a href="#">
+              <div class="media d-flex" style="display:none; justify-content: flex-end">
+                <img src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+                <div class="media-body">
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<p style="font-style: normal;font-weight: 400;font-size: 25px; display: inline-block;">Crime Info</p>
+
+<p></p>
+<div class="buttons">
+  <button id="read">Fetch Crime Data</button>
+</div>
+<div id="crimes-table" class="container"></div>
+<table class="table">
+  <tbody>
+    
+    
+     
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+  <script src="./fireConfig.js"></script>
+
+  <script src="./myscript.js"></script>
+    
+    
+     
+  </tbody>
+</table>
+  </div>
+
+
+
+<!-- End page content -->
+<script>
+$(function () {
+// Sidebar toggle behavior
+$("#sidebarCollapse").on("click", function () {
+  $("#sidebar, #content").toggleClass("active");
+});
+});
+
+</script>
+
+</body></html>

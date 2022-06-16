@@ -1,0 +1,43 @@
+body {
+    background-color: cornflowerblue;
+  }
+  .container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    /* border: 2px solid red; */
+    font-family: lexand;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 20px;
+  }
+  h2 {
+    text-align: center;
+  }
+  .container div {
+    text-align: center;
+  }
+  input {
+    width: 250px;
+    padding: 5px;
+  }
+  button {
+    width: 70px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    
+  }
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
