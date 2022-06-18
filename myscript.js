@@ -1,9 +1,8 @@
 const db = firebase.firestore();
 let crimesMarkup = ``;
 
-
 //******************************************************* */
-// Crimes Table 
+// Crimes Table
 //******************************************************* */
 
 document.getElementById("read").onclick = function () {
@@ -27,9 +26,17 @@ document.getElementById("read").onclick = function () {
         crimesMarkup += `
           <tr>
             <td>${doc.id}</td>
-            <td>${doc.data().crime_category ? doc.data().crime_category : ""}</td>
-            <td>${doc.data().crime_reported_at ? new Date(doc.data().crime_reported_at.seconds) : "" }</td>
-            <td>${doc.data().crime_location_pin ? doc.data().crime_location_pin : ""}</td>
+            <td>${
+              doc.data().crime_category ? doc.data().crime_category : ""
+            }</td>
+            <td>${
+              doc.data().crime_reported_at
+                ? new Date(doc.data().crime_reported_at.seconds)
+                : ""
+            }</td>
+            <td>${
+              doc.data().crime_location_pin ? doc.data().crime_location_pin : ""
+            }</td>
             <td>${doc.data().crime_details ? doc.data().crime_details : ""}</td>
             <td><div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
          
