@@ -1,1 +1,1 @@
-# Jaagruk Crime Application Landing poage and Dashboard.
+# Jaagruk Crime Application Landing page and Dashboard.
